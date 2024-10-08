@@ -1,19 +1,43 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native-web";
+import { View, Text, ScrollView, StyleSheet } from "react-native-web";
 
 const SettingsScreen = () => {
-
     return (
-        <View>
-            <Text
-                Style={{
-                    fontSize: 30,
-                    textAlign: "center",
-                    marginTop: "20%"
-                }}
-            >Settings Screen</Text>
-        </View>
+        <ScrollView style={{ flex: 1 }}>
+            <View style={{ alignItems: "center", marginTop: "20%" }}>
+                <Text
+                    style={{
+                        fontSize: 30,
+                        textAlign: "center",
+                        marginBottom: 20,
+                    }}
+                >
+                    Video
+                </Text>
+
+                <video
+                    width="80%" // Ajusta el tamaño del video
+                    height="auto"
+                    controls // Añade controles de reproducción
+                >
+                    <source
+                        src="../assets/DS-LINES.mp4" // Cambia esta URL por la del video que elijas
+                        type="video/mp4"
+                    />
+                    
+                </video>
+            </View>
+        </ScrollView>
     );
-}
+};
+
+// Estilos adicionales
+const styles = StyleSheet.create({
+    video: {
+        width: '80%',  // Ajusta el ancho del video
+        height: 200,   // Fija una altura para el video
+        marginBottom: 20, // Espacio inferior
+    },
+});
 
 export default SettingsScreen;

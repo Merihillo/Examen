@@ -18,11 +18,11 @@ function MyStack() {
             initialRouteName="HomeScreen"
         >
             <HomeStackNavigator.Screen
-                name="HomeScreen"
+                name="Botones"
                 component={HomeScreen}
             />
             <HomeStackNavigator.Screen
-                name="Stack"
+                name="Imagen"
                 component={StackScreen}
                 options={{
                     headerBackVisible: false,
@@ -46,11 +46,11 @@ function MyTabs() {
             name="Home" 
             component={MyStack}
             options={{
-                tabBarLabel: 'Feed',
+                tabBarLabel: 'bottones',
                 tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="home" color={color} size={30}/>
+                    <MaterialCommunityIcons name="alpha-b-circle" color={color} size={30}/>
                 ),
-                tabBarBadge: 10,
+                /* tabBarBadge: 1, */
                 headerShown: false,
 
             }}
@@ -59,13 +59,14 @@ function MyTabs() {
             name="Settings" 
             component={SettingsScreen}
             options={{
-                tabBarLabel: 'Settings',
+                tabBarLabel: 'video',
                 tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="brightness-5" color={color} size={30}/>
+                    <MaterialCommunityIcons name="movie-open" color={color} size={30}/>
                 ),
                 headerShown: false,
             }}
         />
+        
     </Tab.Navigator>
     );
 }
